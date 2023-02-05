@@ -1,0 +1,105 @@
+@import './colors.scss';
+
+.cart {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    >main {
+        padding: 2rem;
+        overflow-y: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        >h1 {
+            color: $tertiary;
+            font: 100 1.5rem "Roboto";
+        }
+    }
+
+    >aside {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $primary;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 100px 0 0 100px;
+        padding: 1rem;
+
+        >h4 {
+            font: 300 1.2rem "Roboto";
+            margin: 0.7rem;
+            opacity: 0.9;
+            letter-spacing: 2px;
+
+            &:last-of-type {
+                font-weight: 600;
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+.cartItem {
+    background-color: $tertiary;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 0.6rem;
+    color: $primary;
+
+    >img {
+        height: 150px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    >div {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        >button {
+            width: 25px;
+            height: 25px;
+            background-color: $primary;
+            color: $tertiary;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+
+            &:hover {
+                background-color: $primarydark;
+            }
+        }
+
+        >p {
+            font-size: 1rem;
+            margin: 0 0.8rem;
+        }
+    }
+    >svg{
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: inline-block;
+        margin: auto;
+        &:hover{
+            color: red;
+        }
+    }
+    >article{
+        margin: 0 4rem;
+        >h3{
+            margin: 3px 0;
+        }
+
+    }
+
+}
